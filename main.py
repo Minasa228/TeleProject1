@@ -4,6 +4,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from stage1 import Ui_MainWindow
 from AuthorizationWindow import Ui_AuthorizationWindow
 from GenreWindow import Ui_GenreWindow
+from SettingWindow import Ui_SettingsWindow
 
 #app = QApplication([])
 #window = Window()
@@ -25,22 +26,29 @@ def Genre_Button_openOtherWindow():# Кнопка запуска окна выб
     MainWindow.close()
     # Dialog.hide()
     GenreWindow.show()
-
     def returnToMain():  # Кнопка возврата на основное окно
         GenreWindow.close()
         MainWindow.show()
     ui.BackButton.clicked.connect(returnToMain)
-
-
 ui.pushButton_3.clicked.connect(Genre_Button_openOtherWindow)
 
 def Search_Button():# Кнопка активации поиска
     print("clicked!!!")
     print(ui.plainTextEdit.toPlainText())
 ui.pushButton_7.clicked.connect(Search_Button)
-def Settings_Button():# Кнопка запуска окна с настройками
-    print("clicked!!!")
-ui.pushButton_5.clicked.connect(Settings_Button)
+def Settings_Button_openOtherWindow():# Кнопка запуска окна с настройками
+    global SettingsWindow
+    SettingsWindow = QtWidgets.QDialog()
+    ui = Ui_SettingsWindow()
+    ui.setupUi(SettingsWindow)
+    MainWindow.close()
+    # Dialog.hide()
+    SettingsWindow.show()
+    def returnToMain():  # Кнопка возврата на основное окно
+        SettingsWindow.close()
+        MainWindow.show()
+    ui.BackButton.clicked.connect(returnToMain)
+ui.pushButton_5.clicked.connect(Settings_Button_openOtherWindow)
 
 def Authorization_Button_openOtherWindow(): #Кнопка открытия окна диалога
     global AuthorizationWindow
@@ -50,12 +58,10 @@ def Authorization_Button_openOtherWindow(): #Кнопка открытия ок�
     MainWindow.close()
     #Dialog.hide()
     AuthorizationWindow.show()
-
     def returnToMain(): #Кнопка возврата на основное окно
         AuthorizationWindow.close()
         MainWindow.show()
     ui.BackButton.clicked.connect(returnToMain)
-
 ui.pushButton_6.clicked.connect(Authorization_Button_openOtherWindow)
 
 

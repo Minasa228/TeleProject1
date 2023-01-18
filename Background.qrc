@@ -1,0 +1,39 @@
+<RCC>
+  <qresource prefix="Background">
+    <file>background1080.png</file>
+  </qresource>
+  <qresource prefix="BackgroundFinal">
+    <file>finalBackground1080.png</file>
+  </qresource>
+  <qresource prefix="Usericon-Button">
+    <file>Usericon-button1080.png</file>
+  </qresource>
+  <qresource prefix="Main-Button">
+    <file>главная.png</file>
+    <file>main-button-on1080.png</file>
+    <file>main-50.png</file>
+    <file>main-button-off1080.png</file>
+  </qresource>
+  <qresource prefix="Channel-Button">
+    <file>channel-button-on1080.png</file>
+    <file>channel-button-off1080.png</file>
+  </qresource>
+  <qresource prefix="Genres-Button">
+    <file>Genres-button-off1080.png</file>
+    <file>Genres-button-on1080.png</file>
+  </qresource>
+  <qresource prefix="Favourites-Button">
+    <file>favourites-button-on1080.png</file>
+    <file>favourites-button-off1080.png</file>
+  </qresource>
+  <qresource prefix="Search-Button">
+    <file>search-button1080.png</file>
+  </qresource>
+  <qresource prefix="Search-Field">
+    <file>search-field1080.png</file>
+  </qresource>
+  <qresource prefix="Settings-Button">
+    <file>settings-button-off1080.png</file>
+    <file>settings-button-on1080.png</file>
+  </qresource>
+</RCC>

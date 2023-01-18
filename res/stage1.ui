@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-image: url(:/BackgroundFinal/finalBackground1080.png);</string>
   </property>
@@ -26,8 +29,16 @@
       <height>72</height>
      </rect>
     </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(:/Main-Button/main-button-off1080.png); background-color: transparent;</string>
+     <string notr="true">QPushButton {
+	background-image: url(:/Main-Button/main-button-off1080.png); background-color: transparent;
+}
+QPushButton:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(196, 131, 0, 255), stop:1 rgba(255, 255, 255, 255));
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -43,7 +54,12 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(:/Channel-Button/channel-button-off1080.png); background-color: transparent;</string>
+     <string notr="true">QPushButton {
+	background-image: url(:/Channel-Button/channel-button-off1080.png); background-color: transparent;
+}
+QPushButton:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(196, 131, 0, 255), stop:1 rgba(255, 255, 255, 255));
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -59,7 +75,12 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(:/Genres-Button/Genres-button-off1080.png); background-color: transparent;</string>
+     <string notr="true">QPushButton {
+	background-image: url(:/Genres-Button/Genres-button-off1080.png); background-color: transparent;
+}
+QPushButton:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(196, 131, 0, 255), stop:1 rgba(255, 255, 255, 255));
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -75,7 +96,12 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(:/Favourites-Button/favourites-button-off1080.png); background-color: transparent;</string>
+     <string notr="true">QPushButton {
+	background-image: url(:/Favourites-Button/favourites-button-off1080.png); background-color: transparent;
+}
+QPushButton:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(196, 131, 0, 255), stop:1 rgba(255, 255, 255, 255));
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -101,7 +127,12 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(:/Settings-Button/settings-button-off1080.png); background-color: transparent;
+     <string notr="true">QPushButton {
+background-image: url(:/Settings-Button/settings-button-off1080.png); background-color: transparent;
+}
+QPushButton:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(196, 131, 0, 255), stop:1 rgba(255, 255, 255, 255));
+}
 </string>
     </property>
     <property name="text">
@@ -116,6 +147,12 @@
       <width>124</width>
       <height>124</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-image: url(:/Usericon-Button/Usericon-button1080.png); background-color: transparent;</string>

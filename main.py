@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import QApplication
 from PyQt5 import QtCore, QtGui, QtWidgets
 from stage1 import Ui_MainWindow
 from AuthorizationWindow import Ui_AuthorizationWindow
+from GenreWindow import Ui_GenreWindow
 
 #app = QApplication([])
 #window = Window()
@@ -16,9 +17,23 @@ ui = Ui_MainWindow()
 ui.setupUi(MainWindow)
 MainWindow.show()
 
-def Genres_Button():# Кнопка запуска окна выбора жанра
-    print("clicked!!!")
-ui.pushButton_3.clicked.connect(Genres_Button)
+def Genre_Button_openOtherWindow():# Кнопка запуска окна выбора жанра
+    global GenreWindow
+    GenreWindow = QtWidgets.QDialog()
+    ui = Ui_GenreWindow()
+    ui.setupUi(GenreWindow)
+    MainWindow.close()
+    # Dialog.hide()
+    GenreWindow.show()
+
+    def returnToMain():  # Кнопка возврата на основное окно
+        GenreWindow.close()
+        MainWindow.show()
+    ui.BackButton.clicked.connect(returnToMain)
+
+
+ui.pushButton_3.clicked.connect(Genre_Button_openOtherWindow)
+
 def Search_Button():# Кнопка активации поиска
     print("clicked!!!")
     print(ui.plainTextEdit.toPlainText())

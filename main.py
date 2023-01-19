@@ -5,6 +5,7 @@ from stage1 import Ui_MainWindow
 from AuthorizationWindow import Ui_AuthorizationWindow
 from GenreWindow import Ui_GenreWindow
 from SettingWindow import Ui_SettingsWindow
+import db_handler
 
 #app = QApplication([])
 #window = Window()
@@ -62,6 +63,18 @@ def Authorization_Button_openOtherWindow(): #Кнопка открытия ок�
         AuthorizationWindow.close()
         MainWindow.show()
     ui.BackButton.clicked.connect(returnToMain)
+
+    def AdminAuth_Button():
+        print("clicked!!!")
+        login = ui.AdminLogin.toPlainText()
+        password = ui.AdminPass.toPlainText()
+        if db_handler.login(login, password):
+            print("Ok")
+        else:
+            print("Not OK")
+
+    ui.AdminAuth.clicked.connect(AdminAuth_Button)
+
 ui.pushButton_6.clicked.connect(Authorization_Button_openOtherWindow)
 
 

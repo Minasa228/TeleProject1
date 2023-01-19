@@ -44,16 +44,10 @@ def Settings_Button_openOtherWindow():# Кнопка запуска окна с 
     MainWindow.close()
     # Dialog.hide()
     SettingsWindow.show()
-
-    def __init__(self):
-
-    self.loadProducts()
-    def loadProducts(self)
     def returnToMain():  # Кнопка возврата на основное окно
         SettingsWindow.close()
         MainWindow.show()
     ui.BackButton.clicked.connect(returnToMain)
-
 ui.pushButton_5.clicked.connect(Settings_Button_openOtherWindow)
 
 def Authorization_Button_openOtherWindow(): #Кнопка открытия окна диалога

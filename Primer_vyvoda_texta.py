@@ -3,7 +3,7 @@ import string
 import sys
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
-from PyQt5.QtWidgets import *
+from PyQt5.QtWidgets import * #### ТУТ ПРИМЕР ДЛЯ ВЫВОДА В ПОЛЕ
 import gui
 class Example(QMainWindow, gui.Ui_MainWindow):
     def __init__(self):

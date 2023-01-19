@@ -69,4 +69,12 @@ class QueryDB:
         db.commit()
         db.close()
 
+    @staticmethod
+    def select_db_login(login, password):
+        db = sqlite3.connect('teleprogramms.db')
+        c = db.cursor()
+        c.execute(f"SELECT * FROM users WHERE login = {login} and password = {password}")
+        db.commit()
+        db.close()
+
     db.close()

@@ -44,7 +44,7 @@ def Settings_Button_openOtherWindow():# Кнопка запуска окна с 
     MainWindow.close()
     # Dialog.hide()
     SettingsWindow.show()
-class
+
     def __init__(self):
 
     self.loadProducts()

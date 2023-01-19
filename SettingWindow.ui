@@ -13,16 +13,6 @@
   <property name="windowTitle">
    <string>Edit Database</string>
   </property>
-  <widget class="QTableView" name="TableForEditDatabase">
-   <property name="geometry">
-    <rect>
-     <x>9</x>
-     <y>9</y>
-     <width>731</width>
-     <height>481</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
@@ -60,6 +50,16 @@
    </property>
    <property name="text">
     <string>Назад</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="TableForEditDatabase">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>11</y>
+     <width>731</width>
+     <height>541</height>
+    </rect>
    </property>
   </widget>
  </widget>

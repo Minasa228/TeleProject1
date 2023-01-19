@@ -15,9 +15,6 @@ class Ui_SettingsWindow(object):
     def setupUi(self, SettingsWindow):
         SettingsWindow.setObjectName("SettingsWindow")
         SettingsWindow.resize(764, 613)
-        self.TableForEditDatabase = QtWidgets.QTableView(SettingsWindow)
-        self.TableForEditDatabase.setGeometry(QtCore.QRect(9, 9, 731, 481))
-        self.TableForEditDatabase.setObjectName("TableForEditDatabase")
         self.pushButton = QtWidgets.QPushButton(SettingsWindow)
         self.pushButton.setGeometry(QtCore.QRect(440, 570, 301, 31))
         self.pushButton.setObjectName("pushButton")
@@ -27,6 +24,11 @@ class Ui_SettingsWindow(object):
         self.BackButton = QtWidgets.QPushButton(SettingsWindow)
         self.BackButton.setGeometry(QtCore.QRect(340, 570, 75, 31))
         self.BackButton.setObjectName("BackButton")
+        self.TableForEditDatabase = QtWidgets.QTableWidget(SettingsWindow)
+        self.TableForEditDatabase.setGeometry(QtCore.QRect(15, 11, 731, 541))
+        self.TableForEditDatabase.setObjectName("TableForEditDatabase")
+        self.TableForEditDatabase.setColumnCount(0)
+        self.TableForEditDatabase.setRowCount(0)
 
         self.retranslateUi(SettingsWindow)
         QtCore.QMetaObject.connectSlotsByName(SettingsWindow)
